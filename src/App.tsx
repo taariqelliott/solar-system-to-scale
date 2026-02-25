@@ -34,7 +34,7 @@ export default function App() {
       </div>
       <Canvas>
         <Suspense>
-          <TrackballControls />
+          <TrackballControls noPan />
           <PerspectiveCamera
             makeDefault
             position={camPos}
