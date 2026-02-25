@@ -1,39 +1,42 @@
-export const EARTH_SIZE = 50;
-export const EARTH_DIST = 9300;
+const SMOOTHNESS = 50;
+const SIZE_MULT = 1;
+const DIST_MULT = 1;
+
+export const EARTH_SIZE = 50 * SIZE_MULT;
+export const EARTH_DIST = 9300 * DIST_MULT
 export const EARTH_ROTATION_SPEED = 0.0001211;
 
-export const SUN_SIZE = 5450;
-export const SUN_DIST = 0;
+export const SUN_SIZE = 5450 * SIZE_MULT;
+export const SUN_DIST = 0 * DIST_MULT
 export const SUN_ROTATION_SPEED = 0.0000953;
 
-export const MERCURY_SIZE = 19;
-export const MERCURY_DIST = 3600;
+export const MERCURY_SIZE = 19 * SIZE_MULT;
+export const MERCURY_DIST = 3600 * DIST_MULT
 export const MERCURY_ROTATION_SPEED = 0.0000021;
 
-export const VENUS_SIZE = 47;
-export const VENUS_DIST = 6700;
+export const VENUS_SIZE = 47 * SIZE_MULT;
+export const VENUS_DIST = 6700 * DIST_MULT
 export const VENUS_ROTATION_SPEED = -0.0000007;
 
-export const MARS_SIZE = 27;
-export const MARS_DIST = 14200;
+export const MARS_SIZE = 27 * SIZE_MULT;
+export const MARS_DIST = 14200 * DIST_MULT
 export const MARS_ROTATION_SPEED = 0.0001176;
 
-export const JUPITER_SIZE = 560;
-export const JUPITER_DIST = 48400;
+export const JUPITER_SIZE = 560 * SIZE_MULT;
+export const JUPITER_DIST = 48400 * DIST_MULT
 export const JUPITER_ROTATION_SPEED = 0.000293;
 
-export const SATURN_SIZE = 470;
-export const SATURN_DIST = 88800;
+export const SATURN_SIZE = 470 * SIZE_MULT;
+export const SATURN_DIST = 88800 * DIST_MULT
 export const SATURN_ROTATION_SPEED = 0.000263;
 
-export const URANUS_SIZE = 200;
-export const URANUS_DIST = 178600;
+export const URANUS_SIZE = 200 * SIZE_MULT;
+export const URANUS_DIST = 178600 * DIST_MULT
 export const URANUS_ROTATION_SPEED = -0.000101;
 
-export const NEPTUNE_SIZE = 194;
-export const NEPTUNE_DIST = 279900;
+export const NEPTUNE_SIZE = 194 * SIZE_MULT;
+export const NEPTUNE_DIST = 279900 * DIST_MULT
 export const NEPTUNE_ROTATION_SPEED = 0.000112;
-export const SMOOTHNESS = 50;
 
 export class Planet {
   size: [number, number, number];
