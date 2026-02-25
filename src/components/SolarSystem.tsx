@@ -17,36 +17,44 @@ import { StarsMesh } from "../planets/StarsMesh";
 import { SunMesh } from "../planets/SunMesh";
 import { UranusMesh } from "../planets/UranusMesh";
 import { VenusMesh } from "../planets/VenusMesh";
+import { MoonMesh } from "../planets/MoonMesh";
 
 export default function SolarSystem() {
   return (
-    <Canvas>
-      <Suspense fallback={null}>
-        <EffectComposer>
-          <Noise
-            premultiply
-            blendFunction={BlendFunction.OVERLAY}
-            opacity={0.75}
-          />
-          <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={1} />
-          <TrackballControls noPan zoomSpeed={0.1} dynamicDampingFactor={0.1} />
-          <PerspectiveCamera
-            makeDefault
-            position={[20000, 0, 0]}
-            args={[45, 1, 0.1, 10000000]}
-          />
-          <SunMesh />
-          <MercuryMesh />
-          <VenusMesh />
-          <EarthMesh />
-          <MarsMesh />
-          <JupiterMesh />
-          <SaturnMesh />
-          <UranusMesh />
-          <NeptuneMesh />
-          <StarsMesh />
-        </EffectComposer>
-      </Suspense>
-    </Canvas>
+    <main className="h-full w-full">
+      <Canvas>
+        <Suspense fallback={null}>
+          <EffectComposer>
+            <Noise
+              premultiply
+              blendFunction={BlendFunction.OVERLAY}
+              opacity={0.7}
+            />
+            <DepthOfField focusDistance={0} focalLength={0.02} bokehScale={1} />
+            <TrackballControls
+              noPan
+              zoomSpeed={0.1}
+              dynamicDampingFactor={0.1}
+            />
+            <PerspectiveCamera
+              makeDefault
+              position={[19000, 0, 0]}
+              args={[45, 1, 0.1, 10000000]}
+            />
+            <SunMesh />
+            <MercuryMesh />
+            <VenusMesh />
+            <EarthMesh />
+            <MoonMesh />
+            <MarsMesh />
+            <JupiterMesh />
+            <SaturnMesh />
+            <UranusMesh />
+            <NeptuneMesh />
+            <StarsMesh />
+          </EffectComposer>
+        </Suspense>
+      </Canvas>
+    </main>
   );
 }

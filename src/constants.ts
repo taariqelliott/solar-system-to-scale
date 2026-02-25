@@ -1,11 +1,15 @@
 const SMOOTHNESS = 50;
-const SIZE_MULT = 1;
-const DIST_MULT = 1;
-const ROTATION_SPEED = 3.14;
+const SIZE_MULT = 2;
+const DIST_MULT = 2;
+const ROTATION_SPEED = Math.PI;
 
 const EARTH_SIZE = 50 * SIZE_MULT;
 const EARTH_DIST = 9300 * DIST_MULT;
 const EARTH_ROTATION_SPEED = 0.0001211 * ROTATION_SPEED;
+
+const MOON_SIZE = (EARTH_SIZE * SIZE_MULT) / 7.14;
+const MOON_DIST = 9300 * DIST_MULT;
+const MOON_ROTATION_SPEED = 0;
 
 const SUN_SIZE = 5450 * SIZE_MULT;
 const SUN_DIST = 0 * DIST_MULT;
@@ -88,6 +92,13 @@ export const earthDetails = new Planet(
   [EARTH_DIST, 0, 0],
   "/planet-textures/Solarsystemscope_texture_2k_earth_daymap.jpg",
   EARTH_ROTATION_SPEED
+);
+
+export const moonDetails = new Planet(
+  [MOON_SIZE / 2, SMOOTHNESS, SMOOTHNESS],
+  [MOON_DIST, 500, -500],
+  "/public/planet-textures/2k_moon.jpg",
+  MOON_ROTATION_SPEED
 );
 
 export const marsDetails = new Planet(
